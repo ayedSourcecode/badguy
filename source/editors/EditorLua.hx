@@ -25,7 +25,7 @@ import sys.io.File;
 import Type.ValueType;
 import Controls;
 import DialogueBoxPsych;
-#if desktop
+#if DISCORD
 import Discord;
 #end
 
@@ -50,7 +50,7 @@ class EditorLua
 		// trace('Lua version: ' + Lua.version());
 		// trace("LuaJIT version: " + Lua.versionJIT());
 
-		var result:Dynamic = LuaL.dofile(lua, script);
+		var result:Dynamic = LuaL.dostring(lua, script);
 		var resultStr:String = Lua.tostring(lua, result);
 		if (resultStr != null && result != 0)
 		{
@@ -206,7 +206,9 @@ class EditorLua
 			}
 		});
 
+		#if DISCORD
 		Discord.DiscordClient.addLuaCallbacks(lua);
+		#end
 
 		call('onCreate', []);
 		#end

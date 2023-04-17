@@ -3,7 +3,7 @@ package;
 import flixel.addons.display.FlxBackdrop;
 import haxe.io.Path;
 import flixel.FlxSprite;
-#if desktop
+#if DISCORD
 import Discord.DiscordClient;
 #end
 import flixel.FlxG;
@@ -38,7 +38,7 @@ class GaleryState extends MusicBeatState
 
 	override function create()
 	{
-		#if desktop
+		#if DISCORD
 		DiscordClient.changePresence("In Gallery", null);
 		#end
 
@@ -74,6 +74,11 @@ class GaleryState extends MusicBeatState
 		}
 
 		changeSelection();
+
+		#if mobile
+		addVirtualPad(LEFT_RIGHT, A_B);
+		#end
+
 		super.create();
 	}
 

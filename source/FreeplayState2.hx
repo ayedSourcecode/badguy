@@ -1,7 +1,7 @@
 // The Freeplay State Shit.txt
 package;
 
-#if desktop
+#if DISCORD
 import Discord.DiscordClient;
 #end
 import editors.ChartingState;
@@ -77,7 +77,7 @@ class FreeplayState extends MusicBeatState
 		PlayState.isStoryMode = false;
 		WeekData.reloadWeekFiles(false);
 
-		#if desktop
+		#if DISCORD
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
@@ -211,6 +211,11 @@ class FreeplayState extends MusicBeatState
 		text.setFormat(Paths.font("vcr.ttf"), size, FlxColor.WHITE, RIGHT);
 		text.scrollFactor.set();
 		add(text);
+
+		#if mobile
+		addVirtualPad(LEFT_FULL, A_B);
+		#end
+	
 		super.create();
 	}
 

@@ -1,7 +1,7 @@
 package;
 
 import flixel.addons.display.FlxBackdrop;
-#if desktop
+#if DISCORD
 import Discord.DiscordClient;
 #end
 import editors.ChartingState;

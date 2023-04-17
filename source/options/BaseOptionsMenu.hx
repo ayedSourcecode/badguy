@@ -1,6 +1,6 @@
 package options;
 
-#if desktop
+#if DISCORD
 import Discord.DiscordClient;
 #end
 import flash.text.TextField;
@@ -53,7 +53,7 @@ class BaseOptionsMenu extends MusicBeatSubstate
 		if (rpcTitle == null)
 			rpcTitle = 'Options Menu';
 
-		#if desktop
+		#if DISCORD
 		DiscordClient.changePresence(rpcTitle, null);
 		#end
 
@@ -128,6 +128,10 @@ class BaseOptionsMenu extends MusicBeatSubstate
 
 		changeSelection();
 		reloadCheckboxes();
+
+		#if mobile
+		addVirtualPad(LEFT_FULL, A_B);
+		#end
 	}
 
 	public function addOption(option:Option)

@@ -1,6 +1,6 @@
 package editors;
 
-#if desktop
+#if DISCORD
 import Discord.DiscordClient;
 #end
 import flash.geom.Rectangle;
@@ -238,7 +238,7 @@ class ChartingState extends MusicBeatState
 
 		// Paths.clearMemory();
 
-		#if desktop
+		#if DISCORD
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("Chart Editor", StringTools.replace(_song.song, '-', ' '));
 		#end

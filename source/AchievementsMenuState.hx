@@ -1,6 +1,6 @@
 package;
 
-#if desktop
+#if DISCORD
 import Discord.DiscordClient;
 #end
 import flash.text.TextField;
@@ -31,7 +31,7 @@ class AchievementsMenuState extends MusicBeatState
 
 	override function create()
 	{
-		#if desktop
+		#if DISCORD
 		DiscordClient.changePresence("Achievements Menu", null);
 		#end
 

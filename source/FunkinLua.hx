@@ -47,7 +47,7 @@ import hscript.Parser;
 import hscript.Interp;
 import hscript.Expr;
 #end
-#if desktop
+#if DISCORD
 import Discord;
 #end
 
@@ -77,14 +77,9 @@ class FunkinLua
 		lua = LuaL.newstate();
 		LuaL.openlibs(lua);
 		Lua.init_callbacks(lua);
-
-		// trace('Lua version: ' + Lua.version());
-		// trace("LuaJIT version: " + Lua.versionJIT());
-
-		// LuaL.dostring(lua, CLENSE);
 		try
 		{
-			var result:Dynamic = LuaL.dofile(lua, script);
+			var result:Dynamic = LuaL.dostring(lua, script);
 			var resultStr:String = Lua.tostring(lua, result);
 			if (resultStr != null && result != 0)
 			{
@@ -2751,7 +2746,7 @@ class FunkinLua
 		Lua_helper.add_callback(lua, "changePresence",
 			function(details:String, state:Null<String>, ?smallImageKey:String, ?hasStartTimestamp:Bool, ?endTimestamp:Float)
 			{
-				#if desktop
+				#if DISCORD
 				DiscordClient.changePresence(details, state, smallImageKey, hasStartTimestamp, endTimestamp);
 				#end
 			});

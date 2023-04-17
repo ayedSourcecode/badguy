@@ -11,7 +11,7 @@ import openfl.display.Sprite;
 import openfl.events.Event;
 import openfl.display.StageScaleMode;
 import lime.app.Application;
-#if desktop
+#if DISCORD
 import Discord.DiscordClient;
 #end
 // crash handler stuff
@@ -49,6 +49,10 @@ class Main extends Sprite
 
 	public function new()
 	{
+		#if mobile
+		SUtil.uncaughtErrorHandler();
+		#end
+
 		super();
 
 		if (stage != null)
@@ -86,10 +90,14 @@ class Main extends Sprite
 		}
 
 		ClientPrefs.loadDefaultKeys();
+
+		#if mobile
+		SUtil.checkPermissions();
+		#end
+
 		addChild(new FlxGame(game.width, game.height, game.initialState, #if (flixel < "5.0.0") game.zoom, #end game.framerate, game.framerate,
 			game.skipSplash, game.startFullscreen));
 
-		#if !mobile
 		fpsVar = new FPS(10, 3, 0xFFFFFF);
 		addChild(fpsVar);
 		Lib.current.stage.align = "tl";
@@ -98,7 +106,6 @@ class Main extends Sprite
 		{
 			fpsVar.visible = ClientPrefs.showFPS;
 		}
-		#end
 
 		#if html5
 		FlxG.autoPause = false;
@@ -109,7 +116,7 @@ class Main extends Sprite
 		Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
 		#end
 
-		#if desktop
+		#if DISCORD
 		if (!DiscordClient.isInitialized)
 		{
 			DiscordClient.initialize();

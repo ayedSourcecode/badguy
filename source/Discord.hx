@@ -1,5 +1,6 @@
 package;
 
+#if DISCORD
 import Sys.sleep;
 import discord_rpc.DiscordRpc;
 #if LUA_ALLOWED
@@ -103,3 +104,4 @@ class DiscordClient
 	}
 	#end
 }
+#end

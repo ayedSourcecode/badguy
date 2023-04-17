@@ -1,6 +1,6 @@
 package options;
 
-#if desktop
+#if DISCORD
 import Discord.DiscordClient;
 #end
 import flash.text.TextField;
@@ -66,7 +66,7 @@ class OptionsState extends MusicBeatState
 
 	override function create()
 	{
-		#if desktop
+		#if DISCORD
 		DiscordClient.changePresence("Options Menu", null);
 		#end
 
@@ -96,6 +96,10 @@ class OptionsState extends MusicBeatState
 
 		changeSelection();
 		ClientPrefs.saveSettings();
+
+		#if mobile
+		addVirtualPad(UP_DOWN, A_B);
+		#end
 
 		super.create();
 	}

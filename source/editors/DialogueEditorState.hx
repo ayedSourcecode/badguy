@@ -1,6 +1,6 @@
 package editors;
 
-#if desktop
+#if DISCORD
 import Discord.DiscordClient;
 #end
 import flixel.FlxG;
@@ -280,7 +280,7 @@ class DialogueEditorState extends MusicBeatState
 		if (daText.rows > 2)
 			daText.y -= DialogueBoxPsych.LONG_TEXT_ADD;
 
-		#if desktop
+		#if DISCORD
 		// Updating Discord Rich Presence
 		var rpcText:String = lineInputText.text;
 		if (rpcText == null || rpcText.length < 1)

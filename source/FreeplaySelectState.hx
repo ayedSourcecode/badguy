@@ -38,6 +38,10 @@ class FreeplaySelectState extends MusicBeatState
 			freeplayCats.insert(5, "secrets");
 		}
 
+		#if mobile
+		addVirtualPad(LEFT_RIGHT, A_B);
+		#end
+
 		super.create();
 	}
 

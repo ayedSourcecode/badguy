@@ -77,6 +77,8 @@ class DialogueCharacter extends FlxSprite
 	public var skiptimer = 0;
 	public var skipping = 0;
 
+
+
 	public function new(x:Float = 0, y:Float = 0, character:String = null)
 	{
 		super(x, y);
@@ -213,7 +215,7 @@ class DialogueBoxPsych extends FlxSpriteGroup
 
 	var curCharacter:String = "";
 
-	// var charPositionList:Array<String> = ['left', 'center', 'right'];
+	var pressedEnter:Bool = PlayerSettings.player1.controls.ACCEPT;
 
 	public function new(dialogueList:DialogueFile, ?song:String = null)
 	{
@@ -345,7 +347,17 @@ class DialogueBoxPsych extends FlxSpriteGroup
 			if (bgFade.alpha > 0.5)
 				bgFade.alpha = 0.5;
 
-			if (PlayerSettings.player1.controls.ACCEPT)
+			#if mobile
+			for (touch in FlxG.touches.list)
+			{
+				if (touch.justPressed)
+				{
+					pressedEnter = true;
+				}
+			}
+			#end
+
+			if (pressedEnter)
 			{
 				if (!daText.finishedText)
 				{
