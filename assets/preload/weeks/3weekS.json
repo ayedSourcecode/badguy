@@ -1,0 +1,40 @@
+{
+  "songs": [
+    [
+      "purple eyes",
+      "nikitos",
+      [
+        0,
+        0,
+        255
+      ]
+    ],
+    [
+      "meet",
+      "dimacub",
+      [
+        255,
+        255,
+        255
+      ]
+    ]
+  ],
+  "hideFreeplay": false,
+  "weekBackground": "",
+  "difficulties": "hard",
+  "weekCharacters": [
+    "",
+    "menu_badguy",
+    ""
+  ],
+  "storyName": "subs week",
+  "weekName": "subs",
+  "freeplayColor": [
+    146,
+    113,
+    253
+  ],
+  "hideStoryMode": true,
+  "weekBefore": "",
+  "startUnlocked": true
+}

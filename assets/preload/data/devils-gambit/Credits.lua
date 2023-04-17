@@ -1,0 +1,5 @@
+function onCreate()
+makeLuaText('watermark', songName .. " Original Song By Innuendo and Saruky", 0, 25, 600);
+    setTextSize('watermark', 20);
+    addLuaText('watermark');
+end

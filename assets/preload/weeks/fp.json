@@ -1,0 +1,49 @@
+{
+  "songs": [
+    [
+      "purpled",
+      "badguy",
+      [
+        145,
+        50,
+        255
+      ]
+    ],
+    [
+      "powerful",
+      "badguy",
+      [
+        145,
+        50,
+        255
+      ]
+    ],
+    [
+      "bulletation",
+      "mc",
+      [
+        145,
+        50,
+        255
+      ]
+    ]
+  ],
+  "hideFreeplay": false,
+  "weekBackground": "stage",
+  "difficulties": "hard",
+  "weekCharacters": [
+    "bf",
+    "bf",
+    "gf"
+  ],
+  "storyName": "fpsongs",
+  "weekName": "fp",
+  "freeplayColor": [
+    146,
+    113,
+    253
+  ],
+  "hideStoryMode": true,
+  "weekBefore": "tutorial",
+  "startUnlocked": true
+}

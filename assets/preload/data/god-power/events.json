@@ -1,0 +1,69 @@
+{
+  "song": {
+    "speed": 3,
+    "stage": "badguy-bg",
+    "player1": "bf",
+    "player2": "badguy_angry",
+    "player3": null,
+    "events": [
+      [
+        774.193548387097,
+        [
+          [
+            "noteskinchangeOPPT",
+            "BadguyNotes",
+            ""
+          ]
+        ]
+      ],
+      [
+        26709.6774193549,
+        [
+          [
+            "Add Camera Zoom",
+            "0.015",
+            "0.03"
+          ]
+        ]
+      ],
+      [
+        67354.8387096775,
+        [
+          [
+            "Screen Shake",
+            "0.05",
+            "4"
+          ]
+        ]
+      ],
+      [
+        67354.8387096775,
+        [
+          [
+            "Add Camera Zoom",
+            "0.015",
+            "0.03"
+          ]
+        ]
+      ],
+      [
+        93145.1612903225,
+        [
+          [
+            "Add Camera Zoom",
+            "0.015",
+            "0.03"
+          ]
+        ]
+      ]
+    ],
+    "notes": [],
+    "splashSkin": "noteSplashes",
+    "validScore": false,
+    "gfVersion": "gf",
+    "bpm": 310,
+    "arrowSkin": "",
+    "needsVoices": true,
+    "song": "god-power"
+  }
+}

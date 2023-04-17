@@ -1,0 +1,32 @@
+{
+	"songs": [
+		[
+			"oooomg",
+			"ggleb",
+			[
+				255,
+				255,
+				0
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "",
+	"weekCharacters": [
+		"ggleb",
+		"bf",
+		"othim"
+	],
+	"storyName": "oooomg",
+	"weekName": "oooomg",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": false
+}

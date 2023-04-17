@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="-1.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="-1 basic0000" x="11" y="11" width="527" height="660"/>
+	<SubTexture name="-1 white0000" x="11" y="11" width="527" height="660"/>
+	<SubTexture name="-1 white0001" x="549" y="11" width="527" height="660"/>
+	<SubTexture name="-1 white0002" x="1087" y="11" width="527" height="660"/>
+	<SubTexture name="-1 white0003" x="1625" y="11" width="527" height="660"/>
+	<SubTexture name="-1 white0004" x="2163" y="11" width="527" height="660"/>
+	<SubTexture name="-1 white0005" x="2701" y="11" width="527" height="660"/>
+	<SubTexture name="-1 white0006" x="3239" y="11" width="527" height="660"/>
+	<SubTexture name="-1 white0007" x="11" y="682" width="527" height="660"/>
+	<SubTexture name="-1 white0008" x="549" y="682" width="527" height="660"/>
+	<SubTexture name="-1 white0009" x="1087" y="682" width="527" height="660"/>
+	<SubTexture name="-1 white0010" x="1625" y="682" width="527" height="660"/>
+	<SubTexture name="-1 white0011" x="2163" y="682" width="527" height="660"/>
+	<SubTexture name="-1 white0012" x="2701" y="682" width="527" height="660"/>
+	<SubTexture name="-1 white0013" x="3239" y="682" width="527" height="660"/>
+	<SubTexture name="-1 white0014" x="11" y="1353" width="527" height="660"/>
+	<SubTexture name="-1 white0015" x="549" y="1353" width="527" height="660"/>
+	<SubTexture name="-1 white0016" x="1087" y="1353" width="527" height="660"/>
+	<SubTexture name="-1 white0017" x="1625" y="1353" width="527" height="660"/>
+	<SubTexture name="-1 white0018" x="2163" y="1353" width="527" height="660"/>
+	<SubTexture name="-1 white0019" x="2701" y="1353" width="527" height="660"/>
+	<SubTexture name="-1 white0020" x="3239" y="1353" width="527" height="660"/>
+	<SubTexture name="-1 white0021" x="11" y="2024" width="527" height="660"/>
+	<SubTexture name="-1 white0022" x="549" y="2024" width="527" height="660"/>
+	<SubTexture name="-1 white0023" x="1087" y="2024" width="527" height="660"/>
+	<SubTexture name="-1 white0024" x="1625" y="2024" width="527" height="660"/>
+	<SubTexture name="-1 white0025" x="1087" y="2024" width="527" height="660"/>
+	<SubTexture name="-1 white0026" x="549" y="2024" width="527" height="660"/>
+	<SubTexture name="-1 white0027" x="11" y="2024" width="527" height="660"/>
+	<SubTexture name="-1 white0028" x="2163" y="2024" width="527" height="660"/>
+	<SubTexture name="-1 white0029" x="2701" y="2024" width="527" height="660"/>
+	<SubTexture name="-1 white0030" x="3239" y="2024" width="527" height="660"/>
+	<SubTexture name="-1 white0031" x="11" y="2695" width="527" height="660"/>
+	<SubTexture name="-1 white0032" x="549" y="2695" width="527" height="660"/>
+	<SubTexture name="-1 white0033" x="1087" y="2695" width="527" height="660"/>
+	<SubTexture name="-1 white0034" x="1625" y="2695" width="527" height="660"/>
+	<SubTexture name="-1 white0035" x="2163" y="2695" width="527" height="660"/>
+	<SubTexture name="-1 white0036" x="2701" y="2695" width="527" height="660"/>
+	<SubTexture name="-1 white0037" x="3239" y="2695" width="527" height="660"/>
+	<SubTexture name="-1 white0038" x="11" y="3366" width="527" height="660"/>
+	<SubTexture name="-1 white0039" x="549" y="3366" width="527" height="660"/>
+	<SubTexture name="-1 white0040" x="1087" y="3366" width="527" height="660"/>
+	<SubTexture name="-1 white0041" x="1625" y="3366" width="527" height="660"/>
+	<SubTexture name="-1 white0042" x="2163" y="3366" width="527" height="660"/>
+	<SubTexture name="-1 white0043" x="2701" y="3366" width="527" height="660"/>
+	<SubTexture name="-1 white0044" x="3239" y="3366" width="527" height="660"/>
+	<SubTexture name="-1 white0045" x="11" y="4037" width="527" height="660"/>
+	<SubTexture name="-1 white0046" x="1625" y="11" width="527" height="660"/>
+	<SubTexture name="-1 white0047" x="1087" y="11" width="527" height="660"/>
+	<SubTexture name="-1 white0048" x="549" y="11" width="527" height="660"/>
+	<SubTexture name="-1 white0049" x="11" y="11" width="527" height="660"/>
+</TextureAtlas>

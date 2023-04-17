@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="covers.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="covers basic0000" x="11" y="11" width="573" height="538"/>
+	<SubTexture name="covers white0000" x="11" y="11" width="573" height="538"/>
+	<SubTexture name="covers white0001" x="595" y="11" width="573" height="538"/>
+	<SubTexture name="covers white0002" x="1179" y="11" width="573" height="538"/>
+	<SubTexture name="covers white0003" x="1763" y="11" width="573" height="538"/>
+	<SubTexture name="covers white0004" x="2347" y="11" width="573" height="538"/>
+	<SubTexture name="covers white0005" x="2931" y="11" width="573" height="538"/>
+	<SubTexture name="covers white0006" x="11" y="560" width="573" height="538"/>
+	<SubTexture name="covers white0007" x="595" y="560" width="573" height="538"/>
+	<SubTexture name="covers white0008" x="1179" y="560" width="573" height="538"/>
+	<SubTexture name="covers white0009" x="1763" y="560" width="573" height="538"/>
+	<SubTexture name="covers white0010" x="2347" y="560" width="573" height="538"/>
+	<SubTexture name="covers white0011" x="2931" y="560" width="573" height="538"/>
+	<SubTexture name="covers white0012" x="11" y="1109" width="573" height="538"/>
+	<SubTexture name="covers white0013" x="595" y="1109" width="573" height="538"/>
+	<SubTexture name="covers white0014" x="1179" y="1109" width="573" height="538"/>
+	<SubTexture name="covers white0015" x="1763" y="1109" width="573" height="538"/>
+	<SubTexture name="covers white0016" x="2347" y="1109" width="573" height="538"/>
+	<SubTexture name="covers white0017" x="2931" y="1109" width="573" height="538"/>
+	<SubTexture name="covers white0018" x="11" y="1658" width="573" height="538"/>
+	<SubTexture name="covers white0019" x="595" y="1658" width="573" height="538"/>
+	<SubTexture name="covers white0020" x="1179" y="1658" width="573" height="538"/>
+	<SubTexture name="covers white0021" x="1763" y="1658" width="573" height="538"/>
+	<SubTexture name="covers white0022" x="2347" y="1658" width="573" height="538"/>
+	<SubTexture name="covers white0023" x="2931" y="1658" width="573" height="538"/>
+	<SubTexture name="covers white0024" x="2347" y="1658" width="573" height="538"/>
+	<SubTexture name="covers white0025" x="11" y="2207" width="573" height="538"/>
+	<SubTexture name="covers white0026" x="1179" y="1658" width="573" height="538"/>
+	<SubTexture name="covers white0027" x="595" y="2207" width="573" height="538"/>
+	<SubTexture name="covers white0028" x="1179" y="2207" width="573" height="538"/>
+	<SubTexture name="covers white0029" x="1763" y="2207" width="573" height="538"/>
+	<SubTexture name="covers white0030" x="2347" y="2207" width="573" height="538"/>
+	<SubTexture name="covers white0031" x="2931" y="2207" width="573" height="538"/>
+	<SubTexture name="covers white0032" x="595" y="1109" width="573" height="538"/>
+	<SubTexture name="covers white0033" x="11" y="1109" width="573" height="538"/>
+	<SubTexture name="covers white0034" x="2931" y="560" width="573" height="538"/>
+	<SubTexture name="covers white0035" x="2347" y="560" width="573" height="538"/>
+	<SubTexture name="covers white0036" x="11" y="2756" width="573" height="538"/>
+	<SubTexture name="covers white0037" x="595" y="2756" width="573" height="538"/>
+	<SubTexture name="covers white0038" x="1179" y="2756" width="573" height="538"/>
+	<SubTexture name="covers white0039" x="1763" y="2756" width="573" height="538"/>
+	<SubTexture name="covers white0040" x="2347" y="2756" width="573" height="538"/>
+	<SubTexture name="covers white0041" x="1763" y="11" width="573" height="538"/>
+	<SubTexture name="covers white0042" x="2931" y="2756" width="573" height="538"/>
+	<SubTexture name="covers white0043" x="595" y="11" width="573" height="538"/>
+	<SubTexture name="covers white0044" x="11" y="11" width="573" height="538"/>
+</TextureAtlas>

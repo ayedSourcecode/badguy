@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Nikitos_Player.png">
+	<!-- Created with Adobe Animate version 21.0.0.35450 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Nikitos Down MISS0000" x="5" y="5" width="471" height="918"/>
+	<SubTexture name="Nikitos Down Note0000" x="486" y="5" width="471" height="918"/>
+	<SubTexture name="Nikitos Idle Dance0000" x="967" y="5" width="502" height="1010"/>
+	<SubTexture name="Nikitos Left MISS0000" x="1479" y="5" width="502" height="999"/>
+	<SubTexture name="Nikitos Left Note0000" x="5" y="1014" width="502" height="999"/>
+	<SubTexture name="Nikitos Right MISS0000" x="1479" y="1014" width="628" height="964"/>
+	<SubTexture name="Nikitos Right Note0000" x="1991" y="5" width="628" height="964"/>
+	<SubTexture name="Nikitos Up MISS0000" x="2117" y="979" width="595" height="961"/>
+	<SubTexture name="Nikitos Up Note0000" x="517" y="1950" width="595" height="961"/>
+</TextureAtlas>

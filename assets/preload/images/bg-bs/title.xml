@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="title.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="cicle0000" x="11" y="11" width="169" height="170"/>
+	<SubTexture name="scr0000" x="11" y="192" width="169" height="169"/>
+</TextureAtlas>

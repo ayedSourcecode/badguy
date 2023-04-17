@@ -1,0 +1,49 @@
+{
+  "songs": [
+    [
+      "supremacy",
+      "icon-mc",
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      "accelerant",
+      "mc",
+      [
+        255,
+        0,
+        0
+      ]
+    ],
+    [
+      "devils gambit",
+      "NightmareBadguy",
+      [
+        90,
+        0,
+        255
+      ]
+    ]
+  ],
+  "hideFreeplay": false,
+  "weekBackground": "stage",
+  "difficulties": "cover",
+  "weekCharacters": [
+    "dad",
+    "bf",
+    "gf"
+  ],
+  "storyName": "covers",
+  "weekName": "cweek",
+  "freeplayColor": [
+    146,
+    113,
+    253
+  ],
+  "hideStoryMode": true,
+  "weekBefore": "tutorial",
+  "startUnlocked": true
+}

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="non-story songs.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="non-story basic0000" x="11" y="11" width="746" height="774"/>
+	<SubTexture name="non-story white0000" x="768" y="11" width="527" height="782"/>
+	<SubTexture name="non-story white0001" x="1306" y="11" width="527" height="782"/>
+	<SubTexture name="non-story white0002" x="1844" y="11" width="527" height="782"/>
+	<SubTexture name="non-story white0003" x="2382" y="11" width="527" height="782"/>
+	<SubTexture name="non-story white0004" x="2920" y="11" width="527" height="782"/>
+	<SubTexture name="non-story white0005" x="3458" y="11" width="527" height="782"/>
+	<SubTexture name="non-story white0006" x="11" y="804" width="527" height="782"/>
+	<SubTexture name="non-story white0007" x="549" y="804" width="527" height="782"/>
+	<SubTexture name="non-story white0008" x="1087" y="804" width="527" height="782"/>
+	<SubTexture name="non-story white0009" x="1625" y="804" width="527" height="782"/>
+	<SubTexture name="non-story white0010" x="2163" y="804" width="527" height="782"/>
+	<SubTexture name="non-story white0011" x="2701" y="804" width="527" height="782"/>
+	<SubTexture name="non-story white0012" x="3239" y="804" width="527" height="782"/>
+	<SubTexture name="non-story white0013" x="11" y="1597" width="527" height="782"/>
+	<SubTexture name="non-story white0014" x="549" y="1597" width="527" height="782"/>
+	<SubTexture name="non-story white0015" x="1087" y="1597" width="527" height="782"/>
+	<SubTexture name="non-story white0016" x="1625" y="1597" width="527" height="782"/>
+	<SubTexture name="non-story white0017" x="2163" y="1597" width="527" height="782"/>
+	<SubTexture name="non-story white0018" x="2701" y="1597" width="527" height="782"/>
+	<SubTexture name="non-story white0019" x="3239" y="1597" width="527" height="782"/>
+	<SubTexture name="non-story white0020" x="11" y="2390" width="527" height="782"/>
+	<SubTexture name="non-story white0021" x="549" y="2390" width="527" height="782"/>
+	<SubTexture name="non-story white0022" x="1087" y="2390" width="527" height="782"/>
+	<SubTexture name="non-story white0023" x="1625" y="2390" width="527" height="782"/>
+	<SubTexture name="non-story white0024" x="2163" y="2390" width="527" height="782"/>
+	<SubTexture name="non-story white0025" x="1625" y="2390" width="527" height="782"/>
+	<SubTexture name="non-story white0026" x="1087" y="2390" width="527" height="782"/>
+	<SubTexture name="non-story white0027" x="549" y="2390" width="527" height="782"/>
+	<SubTexture name="non-story white0028" x="2701" y="2390" width="527" height="782"/>
+	<SubTexture name="non-story white0029" x="3239" y="2390" width="527" height="782"/>
+	<SubTexture name="non-story white0030" x="11" y="3183" width="527" height="782"/>
+	<SubTexture name="non-story white0031" x="549" y="3183" width="527" height="782"/>
+	<SubTexture name="non-story white0032" x="1087" y="3183" width="527" height="782"/>
+	<SubTexture name="non-story white0033" x="1625" y="3183" width="527" height="782"/>
+	<SubTexture name="non-story white0034" x="2163" y="3183" width="527" height="782"/>
+	<SubTexture name="non-story white0035" x="2701" y="3183" width="527" height="782"/>
+	<SubTexture name="non-story white0036" x="3239" y="3183" width="527" height="782"/>
+	<SubTexture name="non-story white0037" x="11" y="3976" width="527" height="782"/>
+	<SubTexture name="non-story white0038" x="549" y="3976" width="527" height="782"/>
+	<SubTexture name="non-story white0039" x="1087" y="3976" width="527" height="782"/>
+	<SubTexture name="non-story white0040" x="1625" y="3976" width="527" height="782"/>
+	<SubTexture name="non-story white0041" x="2163" y="3976" width="527" height="782"/>
+	<SubTexture name="non-story white0042" x="2701" y="3976" width="527" height="782"/>
+	<SubTexture name="non-story white0043" x="3239" y="3976" width="527" height="782"/>
+	<SubTexture name="non-story white0044" x="11" y="4769" width="527" height="782"/>
+	<SubTexture name="non-story white0045" x="549" y="4769" width="527" height="782"/>
+	<SubTexture name="non-story white0046" x="2382" y="11" width="527" height="782"/>
+	<SubTexture name="non-story white0047" x="1844" y="11" width="527" height="782"/>
+	<SubTexture name="non-story white0048" x="1306" y="11" width="527" height="782"/>
+	<SubTexture name="non-story white0049" x="768" y="11" width="527" height="782"/>
+</TextureAtlas>

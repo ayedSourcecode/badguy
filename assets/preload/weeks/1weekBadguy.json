@@ -1,0 +1,29 @@
+{
+  "songs": [
+    [
+      "warm up",
+      "badguy"
+    ],
+    [
+      "immortal",
+      "badguy"
+    ],
+    [
+      "god power",
+      "badguy"
+    ]
+  ],
+  "weekCharacters": [
+    "menu_badguy",
+    "bf",
+    "gf"
+  ],
+  "weekBackground": "badguybg",
+  "difficulties": "easy, normal, hard, hell",
+  "storyName": "unsouled",
+  "weekBefore": "cweek",
+  "weekName": "1weekBadguy",
+  "startUnlocked": true,
+  "hideStoryMode": false,
+  "hideFreeplay": false
+}

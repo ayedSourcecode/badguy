@@ -1,0 +1,32 @@
+{
+  "dialogue": [
+    {
+      "speed": 0.05,
+      "portrait": "badguytalk",
+      "boxState": "normal",
+      "expression": "talk",
+      "text": "Oh, I noticed"
+    },
+    {
+      "speed": 0.05,
+      "portrait": "badguytalk",
+      "boxState": "normal",
+      "expression": "talk",
+      "text": "You pushing me on your healthbar"
+    },
+    {
+      "speed": 0.05,
+      "portrait": "bf",
+      "boxState": "normal",
+      "expression": "talk",
+      "text": "beep bop"
+    },
+    {
+      "speed": 0.05,
+      "portrait": "badguytalk",
+      "boxState": "normal",
+      "expression": "talk",
+      "text": "Will fair if I Will make same"
+    }
+  ]
+}

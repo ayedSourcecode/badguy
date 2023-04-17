@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="MC_badguy.png">
+	<!-- Created with Adobe Animate version 21.0.2.37893 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="MCdown0000" x="1158" y="492" width="298" height="494"/>
+	<SubTexture name="MCdown0001" x="1158" y="492" width="298" height="494"/>
+	<SubTexture name="MCdown0002" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0003" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0004" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0005" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0006" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0007" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0008" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0009" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0010" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0011" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0012" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0013" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0014" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0015" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0016" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0017" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0018" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0019" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0020" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0021" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0022" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0023" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCdown0024" x="753" y="486" width="298" height="494"/>
+	<SubTexture name="MCleft0000" x="387" y="481" width="298" height="494"/>
+	<SubTexture name="MCleft0001" x="387" y="481" width="298" height="494"/>
+	<SubTexture name="MCleft0002" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0003" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0004" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0005" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0006" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0007" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0008" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0009" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0010" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0011" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0012" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0013" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0014" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0015" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0016" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0017" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0018" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0019" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0020" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0021" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0022" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0023" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCleft0024" x="0" y="489" width="298" height="494"/>
+	<SubTexture name="MCright0000" x="1176" y="1024" width="298" height="473"/>
+	<SubTexture name="MCright0001" x="1176" y="1024" width="298" height="473"/>
+	<SubTexture name="MCright0002" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0003" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0004" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0005" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0006" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0007" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0008" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0009" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0010" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0011" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0012" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0013" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0014" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0015" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0016" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0017" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0018" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0019" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0020" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0021" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0022" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCright0023" x="761" y="1038" width="298" height="473"/>
+	<SubTexture name="MCup0000" x="392" y="994" width="298" height="516"/>
+	<SubTexture name="MCup0001" x="392" y="994" width="298" height="516"/>
+	<SubTexture name="MCup0002" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0003" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0004" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0005" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0006" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0007" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0008" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0009" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0010" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0011" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0012" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0013" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0014" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0015" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0016" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0017" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0018" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0019" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0020" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0021" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0022" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0023" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCup0024" x="0" y="1012" width="298" height="494"/>
+	<SubTexture name="MCidle0000" x="0" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0001" x="0" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0002" x="1208" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0003" x="1208" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0004" x="405" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0005" x="405" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0006" x="822" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0007" x="822" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0008" x="405" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0009" x="405" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0010" x="1208" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0011" x="1208" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0012" x="0" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0013" x="0" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0014" x="0" y="0" width="356" height="494"/>
+	<SubTexture name="MCidle0015" x="0" y="0" width="356" height="494"/>
+	<SubTexture name="MCshoot 10000" x="378" y="1552" width="317" height="480"/>
+	<SubTexture name="MCshoot 10001" x="378" y="1552" width="317" height="480"/>
+	<SubTexture name="MCshoot 10002" x="0" y="1552" width="317" height="480"/>
+	<SubTexture name="MCshoot 10003" x="0" y="1552" width="317" height="480"/>
+	<SubTexture name="MCshoot 10004" x="0" y="1552" width="317" height="480"/>
+	<SubTexture name="MCshoot 10005" x="0" y="1552" width="317" height="480"/>
+</TextureAtlas>
