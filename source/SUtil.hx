@@ -86,9 +86,7 @@ class SUtil
 		if (Permissions.getGrantedPermissions().contains(Permissions.WRITE_EXTERNAL_STORAGE)
 			&& Permissions.getGrantedPermissions().contains(Permissions.READ_EXTERNAL_STORAGE))
 		{
-			for (file in Assets.list().filter(folder -> folder.contains('assets/videos')))
-				SUtil.copyContent(file, SUtil.getStorageDirectory() + file);
-			for (file in Assets.list().filter(folder -> folder.contains('assets/mods')))
+			for (file in Assets.list().filter(folder -> folder.contains('assets')))
 				SUtil.copyContent(file, SUtil.getStorageDirectory() + file);
 
 			FlSystem.gc(); // clean da memory.
