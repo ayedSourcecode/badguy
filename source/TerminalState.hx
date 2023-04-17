@@ -45,7 +45,7 @@ class TerminalState extends MusicBeatState
 
 		Main.fps.visible = false;
 		PlayState.isStoryMode = false;
-	
+
 		displayText = new FlxText(0, 0, FlxG.width, previousText, 32);
 		displayText.setFormat(Paths.font("fixedsys.ttf"), 16);
 		displayText.size *= 2;

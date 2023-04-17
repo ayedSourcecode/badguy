@@ -8,12 +8,9 @@ import flixel.FlxG;
 import openfl.Lib;
 
 // Credits to Andromeda Engine (NebulaTheZoura) for porting from shadertoy!
-
-
 class VCRDistortionShader extends FlxShader // https://www.shadertoy.com/view/ldjGzV and https://www.shadertoy.com/view/Ms23DR and https://www.shadertoy.com/view/MsXGD4 and https://www.shadertoy.com/view/Xtccz4
 {
-
-  @:glFragmentSource('#pragma header
+	@:glFragmentSource('#pragma header
   vec2 uv = openfl_TextureCoordv.xy;
   vec2 fragCoord = openfl_TextureCoordv*openfl_TextureSize;
   vec2 iResolution = openfl_TextureSize;
@@ -55,8 +52,8 @@ class VCRDistortionShader extends FlxShader // https://www.shadertoy.com/view/ld
       Color /= Quality * Directions - 15.0;
       gl_FragColor =  Color;
   }')
-  public function new()
-  {
-    super();
-  }
-}//haMBURGERCHEESBEUBRGER!!!!!!!!
+	public function new()
+	{
+		super();
+	}
+} // haMBURGERCHEESBEUBRGER!!!!!!!!

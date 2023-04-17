@@ -1,5 +1,6 @@
 #if sys
 package;
+
 import flixel.addons.display.FlxBackdrop;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -31,8 +32,8 @@ using StringTools;
 
 class Cache extends MusicBeatState
 {
-	public static var bitmapData:Map<String,FlxGraphic>;
-	public static var bitmapData2:Map<String,FlxGraphic>;
+	public static var bitmapData:Map<String, FlxGraphic>;
+	public static var bitmapData2:Map<String, FlxGraphic>;
 
 	var bg:FlxSprite;
 
@@ -48,29 +49,29 @@ class Cache extends MusicBeatState
 	{
 		FlxG.mouse.visible = false;
 
-		FlxG.worldBounds.set(0,0);
+		FlxG.worldBounds.set(0, 0);
 
-		bitmapData = new Map<String,FlxGraphic>();
-		bitmapData2 = new Map<String,FlxGraphic>();
+		bitmapData = new Map<String, FlxGraphic>();
+		bitmapData2 = new Map<String, FlxGraphic>();
 
 		bg = new FlxSprite().loadGraphic(Paths.image('loading/bg'));
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 		bg.screenCenter();
 
-		checker = new FlxBackdrop(Paths.image('bg-bs/loading')); 
-        //checker.velocity.set(112, 110); 
-        checker.updateHitbox(); 
-        checker.scrollFactor.set(0, 0); 
-        checker.alpha = 1; 
-        checker.screenCenter(X);
+		checker = new FlxBackdrop(Paths.image('bg-bs/loading'));
+		// checker.velocity.set(112, 110);
+		checker.updateHitbox();
+		checker.scrollFactor.set(0, 0);
+		checker.alpha = 1;
+		checker.screenCenter(X);
 
-        add(checker);
+		add(checker);
 
 		shitz = new FlxText(12, 630, 300, "Loading...", 12);
 		shitz.scrollFactor.set();
 		shitz.setFormat("VCR OSD Mono", 50, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		//add(shitz);
+		// add(shitz);
 
 		comp = new FlxSprite().loadGraphic(Paths.image('loading/comp'));
 		comp.antialiasing = ClientPrefs.globalAntialiasing;
@@ -102,7 +103,8 @@ class Cache extends MusicBeatState
 		}
 		#end
 
-		sys.thread.Thread.create(() -> {
+		sys.thread.Thread.create(() ->
+		{
 			cache();
 		});
 
@@ -111,36 +113,30 @@ class Cache extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		checker.x += .5*(elapsed/(1/120));
-        checker.y -= 0.16 / (ClientPrefs.framerate / 60);
+		checker.x += .5 * (elapsed / (1 / 120));
+		checker.y -= 0.16 / (ClientPrefs.framerate / 60);
 	}
 
 	function cache()
 	{
 		#if !linux
-
 		for (i in images)
 		{
-			var replaced = i.replace(".png","");
+			var replaced = i.replace(".png", "");
 			var data:BitmapData = BitmapData.fromFile("assets/shared/images/characters/" + i);
 			var graph = FlxGraphic.fromBitmapData(data);
 			graph.persist = true;
 			graph.destroyOnNoUse = false;
-			bitmapData.set(replaced,graph);
+			bitmapData.set(replaced, graph);
 			trace(i);
 		}
-
-
 
 		for (i in music)
 		{
 			trace(i);
 		}
-
-
 		#end
 		FlxG.switchState(new TitleState());
 	}
-
 }
 #end

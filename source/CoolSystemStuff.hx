@@ -2,7 +2,6 @@ package;
 
 // crazy system shit!!!!!
 // lordryan wrote this :) (erizur added cross platform env vars)
-
 class CoolSystemStuff
 {
 	public static function getUsername():String

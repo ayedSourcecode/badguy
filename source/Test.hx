@@ -1,7 +1,6 @@
 package;
 
-import flixel.addons.display.FlxBackdrop; 
-
+import flixel.addons.display.FlxBackdrop;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -27,18 +26,18 @@ import sys.FileSystem;
 
 using StringTools;
 
-class Test extends MusicBeatState{
+class Test extends MusicBeatState
+{
+	override function create()
+	{
+		PlayState.isStoryMode = false;
+	}
 
-    override function create() {
-        PlayState.isStoryMode = false;
-        
-    }
-
-
-    override function update(elapsed:Float) {
-        PlayState.SONG = Song.loadFromJson('Gallery', 'Gallery');
-        PlayState.isStoryMode = false;
-        PlayState.storyDifficulty = 1;
-        LoadingState.loadAndSwitchState(new PlayState());
-    }
+	override function update(elapsed:Float)
+	{
+		PlayState.SONG = Song.loadFromJson('Gallery', 'Gallery');
+		PlayState.isStoryMode = false;
+		PlayState.storyDifficulty = 1;
+		LoadingState.loadAndSwitchState(new PlayState());
+	}
 }

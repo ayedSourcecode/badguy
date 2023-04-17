@@ -25,20 +25,15 @@ using StringTools;
 
 class FreePlayC extends MusicBeatState
 {
-
 	override function create()
 	{
 		super.create();
 	}
-
-	
 
 	override function update(elapsed:Float)
 	{
 		MusicBeatState.switchState(new FreeplayCovers());
 
 		super.update(elapsed);
-
 	}
-
 }
