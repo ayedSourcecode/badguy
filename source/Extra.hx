@@ -103,6 +103,7 @@ class Extra extends MusicBeatState
 			if (!isLocked || !weekFile.hiddenUntilUnlocked)
 			{
 				loadedWeeks.push(weekFile);
+				Extraweekdata.setDirectoryFromWeek(weekFile);
 				var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 396, Extraweekdata.weeksList[i]);
 				weekThing.y += ((weekThing.height + 20) * num);
 				weekThing.targetY = num;
@@ -127,6 +128,7 @@ class Extra extends MusicBeatState
 			}
 		}
 
+		Extraweekdata.setDirectoryFromWeek(loadedWeeks[0]);
 		var charArray:Array<String> = loadedWeeks[0].weekCharacters;
 		for (char in 0...3)
 		{
@@ -348,8 +350,11 @@ class Extra extends MusicBeatState
 		if (curDifficulty >= CoolUtil.difficulties.length)
 			curDifficulty = 0;
 
+		Extraweekdata.setDirectoryFromWeek(loadedWeeks[curWeek]);
+
 		var diff:String = CoolUtil.difficulties[curDifficulty];
 		var newImage:FlxGraphic = Paths.image('menudifficulties/' + Paths.formatToSongPath(diff));
+		// trace(Paths.currentModDirectory + ', menudifficulties/' + Paths.formatToSongPath(diff));
 
 		if (sprDifficulty.graphic != newImage)
 		{
@@ -388,6 +393,8 @@ class Extra extends MusicBeatState
 			curWeek = loadedWeeks.length - 1;
 
 		var leWeek:Extraweekdata = loadedWeeks[curWeek];
+		Extraweekdata.setDirectoryFromWeek(leWeek);
+
 		var leName:String = leWeek.storyName;
 		txtWeekTitle.text = leName.toUpperCase();
 		txtWeekTitle.x = FlxG.width - (txtWeekTitle.width + 10);
