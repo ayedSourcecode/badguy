@@ -1,23 +1,19 @@
 package;
 
 #if android
-import android.Permissions;
 import android.content.Context;
-import android.os.Build;
 import android.widget.Toast;
 #end
 import haxe.CallStack;
 import haxe.io.Path;
 import lime.system.System as LimeSystem;
-import openfl.system.System as FlSystem;
+import lime.utils.Assets as LimeAssets;
+import lime.utils.Log as LimeLogger;
 import openfl.Lib;
 import openfl.events.UncaughtErrorEvent;
-import openfl.utils.Assets;
 #if sys
 import sys.FileSystem;
 import sys.io.File;
-#else
-import haxe.Log;
 #end
 
 using StringTools;
@@ -57,42 +53,27 @@ class SUtil
 	}
 
 	/**
-	 * A simple function that checks for storage permissions and game files/folders.
+	 * A simple function that checks for game files/folders.
 	 */
-	public static function checkPermissions():Void
+	public static function checkFiles():Void
 	{
-		#if android
-		if (!Permissions.getGrantedPermissions().contains(Permissions.WRITE_EXTERNAL_STORAGE)
-			&& !Permissions.getGrantedPermissions().contains(Permissions.READ_EXTERNAL_STORAGE))
+		#if mobile
+		#if VIDEOS_ALLOWED
+		for (file in LimeAssets.list().filter(folder -> folder.startsWith('assets/')))
 		{
-			if (VERSION.SDK_INT >= VERSION_CODES.M)
+			if (file.endsWith('.mp4') || file.endsWith('.webm'))
 			{
-				Permissions.requestPermissions([Permissions.WRITE_EXTERNAL_STORAGE, Permissions.READ_EXTERNAL_STORAGE]);
+				var shit:String = file.replace('assets/', '');
+				var library:String = shit.replace(shit.substring(shit.indexOf('/', 0), shit.length), '');
 
-				/**
-				 * Basically for now i can't force the app to stop while its requesting a android permission, so this makes the app to stop while its requesting the specific permission
-				 */
-				Lib.application.window.alert('If you accepted the permissions you are all good!' + "\nIf you didn't then expect a crash"
-					+ '\nPress Ok to see what happens',
-					'Permissions?');
-			}
-			else
-			{
-				Lib.application.window.alert('Please grant the game storage permissions in app settings' + '\nPress Ok to close the app', 'Permissions?');
-				LimeSystem.exit(1);
+				@:privateAccess
+				if (LimeAssets.libraryPaths.exists(library)) // Checking if the key exists first
+					SUtil.copyContent('$library:$file', SUtil.getStorageDirectory() + file);
+				else
+					SUtil.copyContent(file, SUtil.getStorageDirectory() + file);
 			}
 		}
-
-		if (Permissions.getGrantedPermissions().contains(Permissions.WRITE_EXTERNAL_STORAGE)
-			&& Permissions.getGrantedPermissions().contains(Permissions.READ_EXTERNAL_STORAGE))
-		{
-			for (file in Assets.list().filter(folder -> folder.contains('assets/videos')))
-				SUtil.copyContent(file, SUtil.getStorageDirectory() + file);
-			for (file in Assets.list().filter(folder -> folder.contains('assets/mods')))
-				SUtil.copyContent(file, SUtil.getStorageDirectory() + file);
-
-			FlSystem.gc(); // clean da memory.
-		}
+		#end
 		#end
 	}
 
@@ -119,7 +100,7 @@ class SUtil
 			switch (stackItem)
 			{
 				case CFunction:
-					stack.push('Non-Haxe (C) Function');
+					stack.push('C Function');
 				case Module(m):
 					stack.push('Module ($m)');
 				case FilePos(s, file, line, column):
@@ -148,21 +129,21 @@ class SUtil
 				+ Lib.application.meta.get('file')
 				+ '-'
 				+ Date.now().toString().replace(' ', '-').replace(':', "'")
-				+ '.log',
+				+ '.txt',
 				msg
 				+ '\n');
 		}
 		catch (e:Dynamic)
 		{
-			#if android
+			#if (android && debug)
 			Toast.makeText("Error!\nClouldn't save the crash dump because:\n" + e, Toast.LENGTH_LONG);
 			#else
-			println("Error!\nClouldn't save the crash dump because:\n" + e);
+			LimeLogger.println("Error!\nClouldn't save the crash dump because:\n" + e);
 			#end
 		}
 		#end
 
-		println(msg);
+		LimeLogger.println(msg);
 		Lib.application.window.alert(msg, 'Error!');
 		LimeSystem.exit(1);
 	}
@@ -170,15 +151,14 @@ class SUtil
 	/**
 	 * This is mostly a fork of https://github.com/openfl/hxp/blob/master/src/hxp/System.hx#L595
 	 */
+	#if sys
 	public static function mkDirs(directory:String):Void
 	{
 		var total:String = '';
-
 		if (directory.substr(0, 1) == '/')
 			total = '/';
 
 		var parts:Array<String> = directory.split('/');
-
 		if (parts.length > 0 && parts[0].indexOf(':') > -1)
 			parts.shift();
 
@@ -197,7 +177,6 @@ class SUtil
 		}
 	}
 
-	#if sys
 	public static function saveContent(fileName:String = 'file', fileExtension:String = '.json',
 			fileData:String = 'you forgot to add something in your code lol'):Void
 	{
@@ -207,16 +186,13 @@ class SUtil
 				FileSystem.createDirectory(SUtil.getStorageDirectory() + 'saves');
 
 			File.saveContent(SUtil.getStorageDirectory() + 'saves/' + fileName + fileExtension, fileData);
-			#if android
-			Toast.makeText("File Saved Successfully!", Toast.LENGTH_LONG);
-			#end
 		}
 		catch (e:Dynamic)
 		{
-			#if android
+			#if (android && debug)
 			Toast.makeText("Error!\nClouldn't save the file because:\n" + e, Toast.LENGTH_LONG);
 			#else
-			println("Error!\nClouldn't save the file because:\n" + e);
+			LimeLogger.println("Error!\nClouldn't save the file because:\n" + e);
 			#end
 		}
 	}
@@ -225,31 +201,22 @@ class SUtil
 	{
 		try
 		{
-			if (!FileSystem.exists(savePath) && Assets.exists(copyPath))
+			if (!FileSystem.exists(savePath) && LimeAssets.exists(copyPath))
 			{
 				if (!FileSystem.exists(Path.directory(savePath)))
 					SUtil.mkDirs(Path.directory(savePath));
 
-				File.saveBytes(savePath, Assets.getBytes(copyPath));
+				File.saveBytes(savePath, LimeAssets.getBytes(copyPath));
 			}
 		}
 		catch (e:Dynamic)
 		{
-			#if android
-			Toast.makeText("Error!\nClouldn't copy the file because:\n" + e, Toast.LENGTH_LONG);
+			#if (android && debug)
+			Toast.makeText('Error!\nClouldn\'t copy the $copyPath because:\n' + e, Toast.LENGTH_LONG);
 			#else
-			println("Error!\nClouldn't copy the file because:\n" + e);
+			LimeLogger.println('Error!\nClouldn\'t copy the $copyPath because:\n' + e);
 			#end
 		}
 	}
 	#end
-
-	private static function println(msg:String):Void
-	{
-		#if sys
-		Sys.println(msg);
-		#else
-		Log.trace(msg, null); // Pass null to exclude the position.
-		#end
-	}
 }

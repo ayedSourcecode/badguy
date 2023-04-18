@@ -13,7 +13,7 @@ import openfl.utils.AssetType;
 import openfl.utils.Assets as OpenFlAssets;
 import lime.utils.Assets;
 import flixel.FlxSprite;
-#if sys
+#if MODS_ALLOWED
 import sys.io.File;
 import sys.FileSystem;
 #end
@@ -197,7 +197,7 @@ class Paths
 			return file;
 		}
 		#end
-		return #if mobile SUtil.getStorageDirectory() + #end 'assets/videos/$key.$VIDEO_EXT';
+		return SUtil.getStorageDirectory() + 'assets/videos/$key.$VIDEO_EXT';
 	}
 
 	static public function sound(key:String, ?library:String):Sound
@@ -240,7 +240,7 @@ class Paths
 
 	static public function getTextFromFile(key:String, ?ignoreMods:Bool = false):String
 	{
-		#if sys
+		#if MODS_ALLOWED
 		#if MODS_ALLOWED
 		if (!ignoreMods && FileSystem.exists(modFolders(key)))
 			return File.getContent(modFolders(key));
@@ -470,7 +470,7 @@ class Paths
 			if (FileSystem.exists(fileToCheck))
 				return fileToCheck;
 		}
-		return #if mobile SUtil.getStorageDirectory() + #end 'mods/' + key;
+		return 'mods/' + key;
 	}
 
 	public static var globalMods:Array<String> = [];

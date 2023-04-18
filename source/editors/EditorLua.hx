@@ -18,7 +18,7 @@ import flixel.FlxSprite;
 import flixel.FlxCamera;
 import flixel.util.FlxColor;
 import flixel.FlxBasic;
-#if sys
+#if MODS_ALLOWED
 import sys.FileSystem;
 import sys.io.File;
 #end
@@ -50,7 +50,7 @@ class EditorLua
 		// trace('Lua version: ' + Lua.version());
 		// trace("LuaJIT version: " + Lua.versionJIT());
 
-		var result:Dynamic = LuaL.dostring(lua, script);
+		var result:Dynamic = LuaL.dostring(lua, #if MODS_ALLOWED File.getContent(script) #else Assets.getText(script) #end);
 		var resultStr:String = Lua.tostring(lua, result);
 		if (resultStr != null && result != 0)
 		{

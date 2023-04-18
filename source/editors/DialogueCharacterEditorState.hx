@@ -30,7 +30,7 @@ import flixel.FlxCamera;
 import flixel.group.FlxSpriteGroup;
 import lime.system.Clipboard;
 import Alphabet;
-#if sys
+#if MODS_ALLOWED
 import sys.io.File;
 #end
 
@@ -830,7 +830,7 @@ class DialogueCharacterEditorState extends MusicBeatState
 		_file.removeEventListener(Event.CANCEL, onLoadCancel);
 		_file.removeEventListener(IOErrorEvent.IO_ERROR, onLoadError);
 
-		#if sys
+		#if MODS_ALLOWED
 		var fullPath:String = null;
 		@:privateAccess
 		if (_file.__path != null)

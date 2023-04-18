@@ -31,8 +31,8 @@ class Main extends Sprite
 	var game = {
 		width: 1280, // WINDOW width
 		height: 720, // WINDOW height
-		initialState: Cache, // initial game state
-		zoom: -1.0, // game state bounds
+		initialState: #if mobile TitleState #else Cache #end, // initial game state
+		zoom: #if mobile 1.0 #else -1.0 #end, // game state bounds
 		framerate: 60, // default framerate
 		skipSplash: true, // if the default flixel splash screen should be skipped
 		startFullscreen: false // if the game should start at fullscreen mode
@@ -49,10 +49,7 @@ class Main extends Sprite
 
 	public function new()
 	{
-		#if mobile
 		SUtil.uncaughtErrorHandler();
-		#end
-
 		super();
 
 		if (stage != null)
@@ -90,10 +87,7 @@ class Main extends Sprite
 		}
 
 		ClientPrefs.loadDefaultKeys();
-
-		#if mobile
-		SUtil.checkPermissions();
-		#end
+		SUtil.checkFiles();
 
 		addChild(new FlxGame(game.width, game.height, game.initialState, #if (flixel < "5.0.0") game.zoom, #end game.framerate, game.framerate,
 			game.skipSplash, game.startFullscreen));

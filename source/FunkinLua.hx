@@ -32,10 +32,10 @@ import flixel.math.FlxMath;
 import flixel.util.FlxSave;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.system.FlxAssets.FlxShader;
-#if (!flash && sys)
+#if (!flash && MODS_FOLDER && sys)
 import flixel.addons.display.FlxRuntimeShader;
 #end
-#if sys
+#if (MODS_ALLOWED || LUA_ALLOWED)
 import sys.FileSystem;
 import sys.io.File;
 #end
@@ -79,7 +79,7 @@ class FunkinLua
 		Lua.init_callbacks(lua);
 		try
 		{
-			var result:Dynamic = LuaL.dostring(lua, script);
+			var result:Dynamic = LuaL.dostring(lua, #if MODS_ALLOWED File.getContent(script) #else Assets.getText(script) #end);
 			var resultStr:String = Lua.tostring(lua, result);
 			if (resultStr != null && result != 0)
 			{
@@ -3015,7 +3015,7 @@ class FunkinLua
 			try
 			{
 				if (!absolute)
-					File.saveContent(Paths.mods(path), content);
+					File.saveContent(#if MODS_ALLOWED Paths.mods(path) #else Paths.getPreloadPath(path) #end, content);
 				else
 					File.saveContent(path, content);
 
@@ -3253,7 +3253,7 @@ class FunkinLua
 		Lua_helper.add_callback(lua, "directoryFileList", function(folder:String)
 		{
 			var list:Array<String> = [];
-			#if sys
+			#if MODS_ALLOWED
 			if (FileSystem.exists(folder))
 			{
 				for (folder in FileSystem.readDirectory(folder))
@@ -3370,7 +3370,7 @@ class FunkinLua
 		return PlayState.instance.modchartTexts.exists(name) ? PlayState.instance.modchartTexts.get(name) : Reflect.getProperty(PlayState.instance, name);
 	}
 
-	#if (!flash && sys)
+	#if (!flash && MODS_FOLDER && sys)
 	public function getShader(obj:String):FlxRuntimeShader
 	{
 		var killMe:Array<String> = obj.split('.');
@@ -3395,7 +3395,7 @@ class FunkinLua
 		if (!ClientPrefs.shaders)
 			return false;
 
-		#if (!flash && sys)
+		#if (!flash && MODS_FOLDER && sys)
 		if (PlayState.instance.runtimeShaders.exists(name))
 		{
 			luaTrace('Shader $name was already initialized!');
@@ -4046,7 +4046,7 @@ class HScript
 		interp.variables.set('Character', Character);
 		interp.variables.set('Alphabet', Alphabet);
 		interp.variables.set('CustomSubstate', CustomSubstate);
-		#if (!flash && sys)
+		#if (!flash && MODS_FOLDER && sys)
 		interp.variables.set('FlxRuntimeShader', FlxRuntimeShader);
 		#end
 		interp.variables.set('ShaderFilter', openfl.filters.ShaderFilter);

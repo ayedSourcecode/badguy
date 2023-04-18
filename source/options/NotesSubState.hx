@@ -93,6 +93,11 @@ class NotesSubState extends MusicBeatSubstate
 		hsbText.scaleY = 0.6;
 		add(hsbText);
 
+		#if mobile
+		addVirtualPad(LEFT_FULL, A_B_C);
+		addVirtualPadCamera();
+		#end
+		
 		changeSelection();
 	}
 
@@ -213,7 +218,12 @@ class NotesSubState extends MusicBeatSubstate
 		{
 			if (!changingNote)
 			{
+				#if mobile
+				flixel.addons.transition.FlxTransitionableState.skipNextTransOut = true;
+				FlxG.resetState();
+				#else
 				close();
+				#end
 			}
 			else
 			{

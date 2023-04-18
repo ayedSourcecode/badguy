@@ -64,7 +64,7 @@ import Conductor.Rating;
 import flixel.addons.display.FlxRuntimeShader;
 import openfl.filters.ShaderFilter;
 #end
-#if sys
+#if (MODS_ALLOWED || LUA_ALLOWED || mobile)
 import sys.FileSystem;
 import sys.io.File;
 #end
@@ -483,7 +483,7 @@ class PlayState extends MusicBeatState
 		// "GLOBAL" SCRIPTS
 		#if LUA_ALLOWED
 		var filesPushed:Array<String> = [];
-		var foldersToCheck:Array<String> = [Paths.getPreloadPath('scripts/')];
+		var foldersToCheck:Array<String> = [SUtil.getStorageDirectory(DATA) + Paths.getPreloadPath('scripts/')];
 
 		#if MODS_ALLOWED
 		foldersToCheck.insert(0, Paths.mods('scripts/'));
@@ -529,6 +529,10 @@ class PlayState extends MusicBeatState
 		}
 
 		if (doPush)
+			luaArray.push(new FunkinLua(luaFile));
+		#elseif LUA_ALLOWED
+		var luaFile:String = Paths.getPreloadPath('stages/' + curStage + '.lua');
+		if (Assets.exists(luaFile))
 			luaArray.push(new FunkinLua(luaFile));
 		#end
 
@@ -820,7 +824,7 @@ class PlayState extends MusicBeatState
 		// SONG SPECIFIC SCRIPTS
 		#if LUA_ALLOWED
 		var filesPushed:Array<String> = [];
-		var foldersToCheck:Array<String> = [Paths.getPreloadPath('data/' + Paths.formatToSongPath(SONG.song) + '/')];
+		var foldersToCheck:Array<String> = [SUtil.getStorageDirectory(DATA) + Paths.getPreloadPath('data/' + Paths.formatToSongPath(SONG.song) + '/')];
 
 		#if MODS_ALLOWED
 		foldersToCheck.insert(0, Paths.mods('data/' + Paths.formatToSongPath(SONG.song) + '/'));
@@ -917,7 +921,7 @@ class PlayState extends MusicBeatState
 		CustomFadeTransition.nextCamera = camOther;
 	}
 
-	#if (!flash && sys)
+	#if (!flash && MODS_FOLDER && sys)
 	public var runtimeShaders:Map<String, Array<String>> = new Map<String, Array<String>>();
 
 	public function createRuntimeShader(name:String):FlxRuntimeShader
@@ -1159,7 +1163,7 @@ class PlayState extends MusicBeatState
 		inCutscene = true;
 
 		var filepath:String = Paths.video(name);
-		#if sys
+		#if (MODS_ALLOWED || mobile)
 		if (!FileSystem.exists(filepath))
 		#else
 		if (!OpenFlAssets.exists(filepath))
