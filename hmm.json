@@ -54,6 +54,12 @@
 			"type": "git",
 			"ref": "main",
 			"url": "https://github.com/MAJigsaw77/extension-androidtools.git"
+		},
+		{
+			"name": "linc_luajit",
+			"type": "git",
+			"ref": "main",
+			"url": "https://github.com/nebulazorua/linc_luajit.git"
 		}
 	]
 }
