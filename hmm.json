@@ -58,7 +58,7 @@
 		{
 			"name": "linc_luajit",
 			"type": "git",
-			"ref": "main",
+			"ref": "master",
 			"url": "https://github.com/nebulazorua/linc_luajit.git"
 		}
 	]
