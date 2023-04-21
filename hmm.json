@@ -38,6 +38,10 @@
 			"type": "haxelib"
 		},
 		{
+			"name": "hscript",
+			"type": "haxelib"
+		},
+		{
 			"name": "hxCodec",
 			"type": "git",
 			"ref": "main",
