@@ -39,6 +39,7 @@ import flixel.util.FlxStringUtil;
 import flixel.util.FlxTimer;
 import haxe.Json;
 import lime.utils.Assets;
+import lime.utils.Log as LimeLogger;
 import openfl.Lib;
 import openfl.display.BlendMode;
 import openfl.display.StageQuality;
@@ -1169,7 +1170,7 @@ class PlayState extends MusicBeatState
 		if (!OpenFlAssets.exists(filepath))
 		#end
 		{
-			FlxG.log.warn('Couldnt find video file: ' + name);
+			LimeLogger.println('Couldnt find video file: ' + name);
 			startAndEnd();
 			return;
 		}
@@ -1182,7 +1183,7 @@ class PlayState extends MusicBeatState
 			return;
 		}
 		#else
-		FlxG.log.warn('Platform not supported!');
+		LimeLogger.println('Platform not supported!');
 		startAndEnd();
 		return;
 		#end
