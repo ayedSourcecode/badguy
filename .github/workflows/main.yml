@@ -46,6 +46,7 @@ jobs:
       - name: Installing Libraries
         run: |
           haxelib --quiet install hxcpp 4.2.1
+          haxelib --quiet install hxcpp-debug-server
           haxelib --quiet install format
           haxelib --quiet install hxp
           haxelib --quiet install lime
