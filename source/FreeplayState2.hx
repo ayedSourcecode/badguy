@@ -65,7 +65,7 @@ class FreeplayState extends MusicBeatState
 			case 'story songs':
 				addWeek(['Tutorial'], 0, 0xFFce3c80, ['gf']);
 			case 'non-story songs':
-				addWeek(['Bopeebo', 'Fresh', 'Dad-battle'], 1, 0xff00c3ff, ['dad', 'dad', 'dad']);
+				addWeek(['powerful', 'purpled', 'bulletation'], 1, 0xff00c3ff, ['badguy', 'badguy', 'MCbadguy']);
 			case 'covers':
 				addWeek(['Tutorial'], 0, 0xFFce3c80, ['gf']);
 		};
