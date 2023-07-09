@@ -95,7 +95,7 @@ class SUtil
 		var stack:Array<String> = [];
 		stack.push(e.error);
 
-		for (stackItem in CallStack.exceptionStack)
+		for (stackItem in CallStack.exceptionStack(true))
 		{
 			switch (stackItem)
 			{
