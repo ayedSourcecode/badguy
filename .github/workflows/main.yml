@@ -41,7 +41,7 @@ jobs:
       - name: Setup Haxe
         uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.2.0
+          haxe-version: 4.1.1
 
       - name: Installing Libraries
         run: |
@@ -51,9 +51,9 @@ jobs:
           haxelib --quiet install hxp
           haxelib --quiet install lime 7.9.0
           haxelib --quiet install openfl 9.1.0
-          haxelib --quiet install flixel
-          haxelib --quiet install flixel-addons 3.0.2
-          haxelib --quiet install flixel-ui 4.11.0
+          haxelib --quiet install flixel 4.9.0
+          haxelib --quiet install flixel-addons 2.10.0
+          haxelib --quiet install flixel-ui 2.3.3
           haxelib --quiet git linc_luajit https://github.com/sirox228/linc_luajit.git
           haxelib --quiet git hxCodec https://github.com/polybiusproxy/hxCodec.git
           haxelib --quiet git extension-androidtools https://github.com/MAJigsaw77/extension-androidtools.git
