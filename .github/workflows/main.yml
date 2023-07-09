@@ -48,16 +48,20 @@ jobs:
           haxelib --quiet install hxcpp 4.2.1
           haxelib --quiet install hxcpp-debug-server
           haxelib --quiet install format
-          haxelib --quiet install hxcpp
           haxelib --quiet install lime 8.0.0
-          haxelib --quiet install openfl 9.1.0
+          haxelib --quiet install openfl 9.2.1
           haxelib --quiet install flixel 4.11.0
           haxelib --quiet install flixel-addons 2.11.0
           haxelib --quiet install flixel-ui 2.4.0
+          haxelib --quiet install flixel-demos 2.8.1
+          haxelib --quiet set flixel 4.11.0
+          haxelib --quiet set flixel-addons 2.11.0
+          haxelib --quiet set flixel-ui 2.4.0
+          haxelib --quiet set openfl 9.2.1
           haxelib --quiet git linc_luajit https://github.com/sirox228/linc_luajit.git
           haxelib --quiet git hxCodec https://github.com/polybiusproxy/hxCodec.git
           haxelib --quiet git extension-androidtools https://github.com/MAJigsaw77/extension-androidtools.git
-          haxelib --quiet install hscript
+          haxelib --quiet install hscript 2.5.0
           haxelib list
       - name: Configure Android
         run: |
