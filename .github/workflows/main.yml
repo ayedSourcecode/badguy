@@ -52,7 +52,7 @@ jobs:
           haxelib --quiet install openfl 9.2.1
           haxelib --quiet install layout 1.2.1
           haxelib --quiet install actuate 1.9.0
-          haxelib --quiet install flixel 4.11.0
+          haxelib --never install flixel 4.11.0
           haxelib run lime setup flixel
           haxelib --quiet install flixel-addons 2.11.0
           haxelib --quiet install tjson
